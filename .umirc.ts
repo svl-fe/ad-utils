@@ -9,5 +9,6 @@ export default defineConfig({
   publicPath: '/ad-utils/',
   base: '/ad-utils',
   mode: 'site',
+  styles: ['https://cdn.bootcdn.net/ajax/libs/antd/4.7.0/antd.min.css'],
   // more config: https://d.umijs.org/config
 });
