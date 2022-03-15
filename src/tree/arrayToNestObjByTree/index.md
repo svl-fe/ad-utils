@@ -5,7 +5,7 @@ nav:
 group:
   path: /components
   title: 树
-  order: 1
+  order: 2
 ---
 
 ## arrayToNestObjByTree
@@ -25,15 +25,10 @@ group:
 
 ```tsx
 import React from 'react';
-import ShowComp from '../components/ShowComp';
+import ShowComp from '../../components/ShowComp';
 import { arrayToNestObjByTree } from '@svl-ad/ad-utils';
 
 export default () => {
-  const argList = {
-    array: '待处理数组',
-    treeNodes: 'treeNodes 数据',
-  };
-
   const example = `
 arrayToNestObjByTree(
   ['feishu', 'dingding'],
@@ -57,6 +52,6 @@ arrayToNestObjByTree(
  */
   `;
 
-  return <ShowComp argList={argList} example={example} />;
+  return <ShowComp example={example} />;
 };
 ```

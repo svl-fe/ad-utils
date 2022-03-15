@@ -1,4 +1,4 @@
-import { arrayToNestObjByTree } from './index';
+import arrayToNestObjByTree from './index';
 
 describe('arrayToNestObjByTree', () => {
   it('should be equal', () => {
