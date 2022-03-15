@@ -15,12 +15,14 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install and Build
         run: npm install && npm run docs:build
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
           branch: gh-pages
           folder: docs-dist
-      - name: Npm Publish
+
+      - name: Publish
         run: npm run build && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

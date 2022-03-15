@@ -4,25 +4,25 @@
 
 ## 一、项目启动
 
-Install dependencies,
+安装依赖
 
 ```bash
 $ npm i
 ```
 
-Start the dev server,
+本地开发
 
 ```bash
 $ npm start
 ```
 
-Build documentation,
+文档构建
 
 ```bash
 $ npm run docs:build
 ```
 
-Run test,
+运行测试用例
 
 ```bash
 $ npm test
