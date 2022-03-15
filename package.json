@@ -44,13 +44,15 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
     "@types/lodash": "^4.14.178",
+    "@types/react-syntax-highlighter": "^13.5.2",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
     "dumi": "^1.1.0",
