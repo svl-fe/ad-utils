@@ -12,6 +12,17 @@ group:
 
 借助树结构数据，将数组转换成嵌套对象
 
+> 格式：arrayToNestObjByTree(array, treeData)
+
+### 参数说明
+
+| 参数     | 说明           | 类型                            | 默认值 | 是否必传 | 版本 |
+| -------- | -------------- | ------------------------------- | ------ | -------- | ---- |
+| array    | 数组           | string[]                        |        | 是       |      |
+| treeData | treeNodes 数据 | array<{value, title, children}> |        | 是       |      |
+
+### 示例
+
 ```tsx
 import React from 'react';
 import ShowComp from '../components/ShowComp';
@@ -28,19 +39,21 @@ arrayToNestObjByTree(
   ['feishu', 'dingding'],
   [
     {
-      key: 'communication',
+      value: 'communication',
       title: '通信',
       children: [
-        { key: 'feishu', title: '飞书' },
-        { key: 'dingding', title: '钉钉' },
+        { value: 'feishu', title: '飞书' },
+        { value: 'dingding', title: '钉钉' },
       ],
     },
   ],
 );
 /*** 
- *                                      {
- *  ['feishu', "dingding"]    =>            "communication": ["feishu", "dingding"],
- *                                      }
+ * 输出
+ * 
+ * {
+ *     "communication": ["feishu", "dingding"],
+ *  }
  */
   `;
 

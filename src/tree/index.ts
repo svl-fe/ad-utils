@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 export interface ITreeDataItem {
-  key: string;
+  value: string;
   title: string;
 }
 
@@ -16,13 +16,13 @@ function arrayToNestObjByTree(dataList: string[], treeData: ITreeData[]) {
   const obj: Record<string, string[]> = {};
 
   treeData.map((treeItem) => {
-    const key = treeItem.key;
+    const key = treeItem.value;
 
     obj[key] = [];
     if (treeItem?.children) {
       _.map(treeItem.children, (item) => {
-        if (dataList.includes(item.key)) {
-          obj[key].push(item.key);
+        if (dataList.includes(item.value)) {
+          obj[key].push(item.value);
         }
       });
     }

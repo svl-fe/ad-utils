@@ -5,25 +5,25 @@ describe('arrayToNestObjByTree', () => {
     const dataList = ['feishu', 'dingding', 'baidu'];
     const treeList = [
       {
-        key: 'communication',
+        value: 'communication',
         title: '通信',
         children: [
           {
-            key: 'feishu',
+            value: 'feishu',
             title: '飞书',
           },
           {
-            key: 'dingding',
+            value: 'dingding',
             title: '钉钉',
           },
         ],
       },
       {
-        key: 'cloud',
+        value: 'cloud',
         title: '云盘',
         children: [
           {
-            key: 'baidu',
+            value: 'baidu',
             title: '百度',
           },
         ],
