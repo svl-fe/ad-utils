@@ -10,45 +10,40 @@ group:
 
 ## arrayToNestObjByTree
 
-示例: 借助原始树结构数据，将数组转换成嵌套对象
+借助树结构数据，将数组转换成嵌套对象
 
 ```tsx
 import React from 'react';
+import ShowComp from '../components/ShowComp';
 import { arrayToNestObjByTree } from '@svl-ad/ad-utils';
 
-let dataList = ['feishu', 'dingding', 'baidu'];
-let treeData = [
-  {
-    key: 'communication',
-    title: '通信',
-    children: [
-      {
-        key: 'feishu',
-        title: '飞书',
-      },
-      {
-        key: 'dingding',
-        title: '钉钉',
-      },
-    ],
-  },
-  {
-    key: 'cloud',
-    title: '云盘',
-    children: [
-      {
-        key: 'baidu',
-        title: '百度',
-      },
-    ],
-  },
-];
-
-let output = arrayToNestObjByTree(dataList, treeData);
-
-console.log('output', output);
-
 export default () => {
-  return <p>arrayToNestObjByTree(array, treeList)</p>;
+  const argList = {
+    array: '待处理数组',
+    treeNodes: 'treeNodes 数据',
+  };
+
+  const example = `
+arrayToNestObjByTree(
+  ['feishu', 'dingding'],
+  [
+    {
+      key: 'communication',
+      title: '通信',
+      children: [
+        { key: 'feishu', title: '飞书' },
+        { key: 'dingding', title: '钉钉' },
+      ],
+    },
+  ],
+);
+/*** 
+ *                                      {
+ *  ['feishu', "dingding"]    =>            "communication": ["feishu", "dingding"],
+ *                                      }
+ */
+  `;
+
+  return <ShowComp argList={argList} example={example} />;
 };
 ```

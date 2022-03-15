@@ -11,19 +11,7 @@ export interface ITreeData extends ITreeDataItem {
 
 /**
  * 借助原始树结构数据，将数组转换成嵌套对象
- *
- * @param dataList
- * @param orgData
- * @returns
- *
- * 示例：
- *
- *                                      {
- *                                        "communication": ["feishu", "dingding"],
- *  ['feishu', "dingding", 'baidu'] =>    "cloud": ["baidu"],
- *                                      }
  */
-
 function arrayToNestObjByTree(dataList: string[], treeData: ITreeData[]) {
   const obj: Record<string, string[]> = {};
 

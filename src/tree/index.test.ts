@@ -1,9 +1,9 @@
 import { arrayToNestObjByTree } from './index';
 
-describe('树型处理方法', () => {
-  it('arrayToNestObjByTree', () => {
-    let dataList = ['feishu', 'dingding', 'baidu'];
-    let treeList = [
+describe('arrayToNestObjByTree', () => {
+  it('should be equal', () => {
+    const dataList = ['feishu', 'dingding', 'baidu'];
+    const treeList = [
       {
         key: 'communication',
         title: '通信',
@@ -30,7 +30,7 @@ describe('树型处理方法', () => {
       },
     ];
 
-    let results = {
+    const results = {
       communication: ['feishu', 'dingding'],
       cloud: ['baidu'],
     };
