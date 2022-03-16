@@ -16,6 +16,10 @@ describe('arrayToNestObjByTree', () => {
             value: 'dingding',
             title: '钉钉',
           },
+          {
+            value: 'weChat',
+            title: '微信',
+          },
         ],
       },
       {

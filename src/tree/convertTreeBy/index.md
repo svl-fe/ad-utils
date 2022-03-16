@@ -16,10 +16,10 @@ group:
 
 ### 参数说明
 
-| 参数   | 说明           | 类型               | 默认值 | 是否必传 | 版本 |
-| ------ | -------------- | ------------------ | ------ | -------- | ---- |
-| data   | 对象数组或对象 | object[] \| object |        | 是       |      |
-| keyMap | 键值映射       | object             |        | 是       |      |
+| 参数   | 说明                            | 类型               | 默认值 | 是否必传 | 版本 |
+| ------ | ------------------------------- | ------------------ | ------ | -------- | ---- |
+| data   | 对象数组或对象(类似 treeNodes ) | object[] \| object |        | 是       |      |
+| keyMap | 键值映射                        | object             |        | 是       |      |
 
 ### 示例
 
@@ -30,6 +30,9 @@ import { arrayToNestObjByTree } from '@svl-ad/ad-utils';
 
 export default () => {
   const example = `
+/**
+ * 示例： 将数据 data 里面的字段 name 、display_name 替换成 key 、title 字段
+ **/ 
 const data =  [
   {
     name: 'communication',

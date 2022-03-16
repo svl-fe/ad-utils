@@ -12,14 +12,14 @@ group:
 
 借助树结构数据，将数组转换成嵌套对象
 
-> 格式：arrayToNestObjByTree(array, treeData)
+> 格式：arrayToNestObjByTree(selectedList, treeData)
 
 ### 参数说明
 
-| 参数     | 说明           | 类型                            | 默认值 | 是否必传 | 版本 |
-| -------- | -------------- | ------------------------------- | ------ | -------- | ---- |
-| array    | 数组           | string[]                        |        | 是       |      |
-| treeData | treeNodes 数据 | array<{value, title, children}> |        | 是       |      |
+| 参数         | 说明           | 类型                            | 默认值 | 是否必传 | 版本 |
+| ------------ | -------------- | ------------------------------- | ------ | -------- | ---- |
+| selectedList | 选中的数组     | string[]                        |        | 是       |      |
+| treeData     | treeNodes 数据 | array<{value, title, children}> |        | 是       |      |
 
 ### 示例
 
@@ -30,19 +30,23 @@ import { arrayToNestObjByTree } from '@svl-ad/ad-utils';
 
 export default () => {
   const example = `
-arrayToNestObjByTree(
-  ['feishu', 'dingding'],
-  [
-    {
-      value: 'communication',
-      title: '通信',
-      children: [
-        { value: 'feishu', title: '飞书' },
-        { value: 'dingding', title: '钉钉' },
-      ],
-    },
-  ],
-);
+/**
+ * 示例： 将treeData数据(嵌套两层) 按照 array 转换成对象
+ **/
+const array =  ['feishu', 'dingding']
+const treeData = [
+  {
+    value: 'communication',
+    title: '通信',
+    children: [
+      { value: 'feishu', title: '飞书' },
+      { value: 'dingding', title: '钉钉' },
+      { value: 'weChat', title: '微信' },
+    ],
+  },
+]
+
+arrayToNestObjByTree(array, treeData)
 /*** 
  * 输出
  * 
