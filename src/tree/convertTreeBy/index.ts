@@ -26,7 +26,7 @@ function convertTreeBy(data: DkTpgTreeNode | DkTpgTreeNode[], keyMap: Record<str
     return { ...values, ...item };
   };
 
-  if (_data instanceof Array) {
+  if (Object.prototype.toString.call(_data) === '[object Array]') {
     return _data.map(recursiveFn);
   }
 

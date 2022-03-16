@@ -31,9 +31,9 @@ import { arrayToNestObjByTree } from '@svl-ad/ad-utils';
 export default () => {
   const example = `
 /**
- * 示例： 将treeData数据(嵌套两层) 按照 array 转换成对象
+ * 示例： 将treeData数据(嵌套两层) 按照 selectedList 转换成对象
  **/
-const array =  ['feishu', 'dingding']
+const selectedList =  ['feishu', 'dingding']
 const treeData = [
   {
     value: 'communication',
@@ -46,7 +46,7 @@ const treeData = [
   },
 ]
 
-arrayToNestObjByTree(array, treeData)
+arrayToNestObjByTree(selectedList, treeData)
 /*** 
  * 输出
  * 

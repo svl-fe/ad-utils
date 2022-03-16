@@ -16,10 +16,10 @@ group:
 
 ### 参数说明
 
-| 参数   | 说明                            | 类型               | 默认值 | 是否必传 | 版本 |
-| ------ | ------------------------------- | ------------------ | ------ | -------- | ---- |
-| data   | 对象数组或对象(类似 treeNodes ) | object[] \| object |        | 是       |      |
-| keyMap | 键值映射                        | object             |        | 是       |      |
+| 参数 | 说明 | 类型 | 默认值 | 是否必传 | 版本 |
+| --- | --- | --- | --- | --- | --- |
+| data | 对象数组或对象(类似 treeNodes，含 children 字段 ) | object[] \| object |  | 是 |  |
+| keyMap | 键值映射 | object |  | 是 |  |
 
 ### 示例
 
@@ -66,7 +66,7 @@ convertTreeBy(data, keyMap);
 /*** 
   * 输出
   * 
-  *[
+  * [
   *       {
   *         key: 'communication',
   *         title: '通信',
@@ -91,7 +91,7 @@ convertTreeBy(data, keyMap);
   *           },
   *         ],
   *       },
-  *     ];
+  *  ];
  */
   `;
   return <ShowComp example={example} />;
