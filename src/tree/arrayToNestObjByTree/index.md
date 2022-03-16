@@ -3,7 +3,7 @@ nav:
   title: 方法
   path: /components
 group:
-  path: /components
+  path: /tree
   title: 树
   order: 2
 ---
@@ -26,7 +26,6 @@ group:
 ```tsx
 import React from 'react';
 import ShowComp from '../../components/ShowComp';
-import { arrayToNestObjByTree } from '@svl-ad/ad-utils';
 
 export default () => {
   const example = `

@@ -3,8 +3,9 @@ nav:
   title: 方法
   path: /components
 group:
+  path: /string
   title: 字符串
-  order: 2
+  order: 1
 ---
 
 ## getLengthByUnicode
