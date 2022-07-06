@@ -4,5 +4,6 @@
 import convertTreeBy from './convertTreeBy';
 import arrayToNestObjByTree from './arrayToNestObjByTree';
 import flattenSubTreeBy from './flattenSubTreeBy';
+import disableTreeData from './disableTreeData';
 
-export { arrayToNestObjByTree, convertTreeBy, flattenSubTreeBy };
+export { arrayToNestObjByTree, convertTreeBy, flattenSubTreeBy, disableTreeData };
