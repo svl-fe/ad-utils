@@ -13,6 +13,8 @@ type Options = {
   labelKey?: string;
   /** children 字段名，默认值为 children */
   childrenKey?: string;
+  /** 是否可以冒泡，即子节点满足条件，父节点也满足，默认值为true */
+  bubbling?: boolean;
   /** 校验当前数据是否满足可选中条件，入参为当前节点数据值，满足返回true，不满足返回false */
   check: (params: BaseOptionType) => boolean;
   /** 是否需要重新渲染 label，入参为当前当前节点数据值 */
@@ -29,6 +31,7 @@ function disableTreeData(options: Options): { data: BaseOptionType[]; flag: bool
     labelKey = 'label',
     childrenKey = 'children',
     searchKey = 'label',
+    bubbling = true,
     renderWarn,
     check,
   } = options;
@@ -41,10 +44,11 @@ function disableTreeData(options: Options): { data: BaseOptionType[]; flag: bool
     if (check && check(element)) {
       flag = true;
       returnFlag = true;
-    } else if (children?.length) {
-      const { data: newData, flag: newFlag } = disableTreeData({ data: children, check });
+    }
+    if (children?.length) {
+      const { data: newData, flag: newFlag } = disableTreeData({ data: children, check, bubbling });
       element.children = newData;
-      if (newFlag) {
+      if (newFlag && bubbling) {
         flag = true;
         returnFlag = true;
       }

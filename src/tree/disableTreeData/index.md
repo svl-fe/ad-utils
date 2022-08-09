@@ -22,6 +22,7 @@ group:
 | searchKey | 搜索时的字段名 | string | label | 否 |  |
 | labelKey | 展示字段名 | string | label | 否 |  |
 | childrenKey | children 字段名 | string | children | 否 |  |
+| bubbling | 是否可以冒泡，即子节点满足条件，父节点也满足 | boolean | true | 否 |  |
 | check | 校验当前数据是否满足可选中条件，入参为当前节点数据值，满足返回 true，不满足返回 false | (params: BaseOptionType) => boolean |  | 是 |  |
 | renderWarn | 是否需要重新渲染 label，入参为当前当前节点数据值 | (params: BaseOptionType) => React.ReactNode |  | 否 |  |
 
